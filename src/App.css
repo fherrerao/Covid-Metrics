@@ -1,0 +1,13 @@
+.g-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.h-buttons {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.wdt {
+  width: 100%;
+}
