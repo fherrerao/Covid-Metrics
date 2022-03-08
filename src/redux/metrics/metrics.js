@@ -13,6 +13,8 @@ export const getMetrics = async (dispatch) => {
   const arrData = data.map(element => ({
     id: element.countryInfo._id,
     continent: element.continent,
+    country: element.country,
+    image: element.countryInfo.flag,
   }));
   dispatch(addMetrics(arrData));
 }
