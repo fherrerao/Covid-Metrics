@@ -10,13 +10,17 @@ const addMetrics = (payload) => ({
 export const getMetrics = async (dispatch) => {
   const response = await fetch(url);
   const data = await response.json();
-  dispatch(addMetrics(data));
+  const arrData = data.map(element => ({
+    id: element.countryInfo._id,
+    continent: element.continent,
+  }));
+  dispatch(addMetrics(arrData));
 }
 
 const metricsReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_METRICS:
-      return action.payload;
+      return [...action.payload];
 
     default:
       return state;
