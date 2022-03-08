@@ -1,6 +1,6 @@
 const initialState = [];
 const ADD_METRICS = 'covid-metrics/metrics/METRICS';
-const url = 'https://api.covid19tracking.narrativa.com/api/2020-03-22/country/ecuador';
+const url = 'https://disease.sh/v3/covid-19/countries/';
 
 const addMetrics = (payload) => ({
   type: ADD_METRICS,
