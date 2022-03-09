@@ -1,6 +1,8 @@
 const initialState = [];
 const ADD_METRICS = 'covid-metrics/metrics/METRICS';
-const SHOW_CONTINENTS = 'covid-metrics/metrics/SHOW_CONTINENTS';
+const DISPLAY_CONTINENTS = 'covid-metrics/metrics/DISPLAY_CONTINENTS';
+const DISPLAY_COUNTRIES = 'covid-metrics/metrics/DISPLAY_COUNTRIES';
+
 const url = 'https://disease.sh/v3/covid-19/countries/';
 
 const addMetrics = (payload) => ({
@@ -8,8 +10,13 @@ const addMetrics = (payload) => ({
   payload,
 });
 
-export const showContinents = (name) => ({
-  type: SHOW_CONTINENTS,
+export const displayContinents = (name) => ({
+  type: DISPLAY_CONTINENTS,
+  name,
+});
+
+export const displayCountries = () => (name) => ({
+  type: DISPLAY_COUNTRIES,
   name,
 });
 
@@ -21,6 +28,16 @@ export const getMetrics = () => async (dispatch) => {
     continent: element.continent,
     country: element.country,
     image: element.countryInfo.flag,
+    cases: element.cases,
+    todayCases: element.todayCases,
+    deaths: element.deaths,
+    todayDeaths: element.todayDeaths,
+    recovered: element.recovered,
+    todayRecovered: element.todayRecovered,
+    active: element.active,
+    critical: element.critical,
+    tests: element.tests,
+    population: element.population,
   }));
   dispatch(addMetrics(arrData));
 };
@@ -30,11 +47,13 @@ const metricsReducer = (state = initialState, action) => {
     case ADD_METRICS:
       return [...action.payload];
 
-    case SHOW_CONTINENTS:
+    case DISPLAY_CONTINENTS:
       {
         const newState = state.filter((item) => item.continent === action.name);
         return [...newState];
       }
+    case DISPLAY_COUNTRIES:
+      return [...action.name];
 
     default:
       return state;
