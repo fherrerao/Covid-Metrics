@@ -11,3 +11,33 @@
 .wdt {
   width: 100%;
 }
+
+.bg-blue {
+  background-color: #4369b2;
+}
+
+.f-gill {
+  font-family: "Gill Sans", sans-serif;
+}
+
+.fc-white {
+  color: #fff;
+}
+
+.covid {
+  animation: rotation 2s infinite linear;
+}
+
+.h-link:hover {
+  background-color: aliceblue;
+  padding: 0 0.5rem;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
