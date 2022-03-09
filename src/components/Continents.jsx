@@ -1,15 +1,15 @@
 import { useSelector } from "react-redux";
+import { NavLink } from "react-router-dom";
 
 const Continents = () => {
   const arrCountries = useSelector((state) => state.metricsReducer);
-  const arrSelectedContinent = arrCountries.filter(
-    (item) => item.continent === "South America"
-  );
-
+  console.log(arrCountries);
   return (
     <ul>
-      {arrSelectedContinent.map((continent) => (
-        <li>{continent.country}</li>
+      {arrCountries.map((country) => (
+        <NavLink to="" key={country.id}>
+          <div>{country.country}</div>
+        </NavLink>
       ))}
     </ul>
   );

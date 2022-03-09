@@ -1,11 +1,33 @@
-import { useSelector } from "react-redux";
+import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-import Continents from "./Continents";
+import { useDispatch, useSelector } from "react-redux";
+import { showContinents } from "../redux/metrics/metrics";
+import { getMetrics } from "../redux/metrics/metrics";
 
 const Metrics = () => {
-  const arrCountries = useSelector((state) => state.metricsReducer);
-  const arrExample = arrCountries.filter((item) => item.continent === "Asia");
-  // console.log(arrExample);
+  // const [continents, setContinents] = useState([]);
+  const dispatch = useDispatch();
+
+  dispatch(getMetrics());
+
+  // const arrCountries = useSelector((state) => state.metricsReducer);
+  // console.log(arrCountries);
+
+  // setContinents(Object.values(objContinent));
+
+  // useEffect(() => {
+  //   console.log("ENTRANDOOOO");
+  //   let objContinent = {};
+  //   console.log(arrCountries);
+  //   arrCountries.map((item) => {
+  //     const continentName = item.continent;
+  //     console.log(item.continent);
+  //     objContinent[continentName] = continentName;
+  //   });
+
+  //   setContinents(Object.values(objContinent));
+  // }, []);
+
   const arr = [
     "North America",
     "South America",
@@ -16,7 +38,7 @@ const Metrics = () => {
   ];
 
   const handlerContinent = (e) => {
-    console.log(e.target.textContent);
+    dispatch(showContinents(e.target.textContent));
   };
 
   return (
@@ -26,6 +48,9 @@ const Metrics = () => {
           <NavLink
             className="btn btn-outline-secondary btn-lg py-5"
             to={`/countries/${element}`}
+            onClick={(e) => {
+              handlerContinent(e);
+            }}
           >
             {element}
           </NavLink>
