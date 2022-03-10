@@ -10,7 +10,7 @@ import Countries from "./components/Countries";
 
 function App() {
   return (
-    <div>
+    <div className="bg-blue-light">
       <HashRouter basename="/">
         <Header />
         <Routes>
