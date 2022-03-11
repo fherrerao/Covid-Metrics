@@ -1,7 +1,6 @@
 import { useSelector } from 'react-redux';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import sAmerica from '../img/south-america.svg';
 import nAmerica from '../img/north-america.svg';
 import asia from '../img/asia.svg';
@@ -51,7 +50,8 @@ const Continents = () => {
       <button
         type="button"
         className="btn-back c-icon p-1"
-        onClick={() => navigate(-1)}>
+        onClick={() => navigate(-1)}
+      >
         <box-icon name="left-arrow" animation="burst-hover" color="#ffffff">{ }</box-icon>
       </button>
 

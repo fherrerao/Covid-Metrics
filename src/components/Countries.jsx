@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { Table } from 'react-bootstrap';
 
 const Countries = () => {
@@ -21,7 +21,8 @@ const Countries = () => {
       <button
         type="button"
         className="container btn-back c-icon"
-        onClick={() => navigate(-1)}>
+        onClick={() => navigate(-1)}
+      >
         <box-icon name="left-arrow" animation="burst-hover" color="#ffffff">{ }</box-icon>
       </button>
 
