@@ -3,6 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { displayContinents, getMetrics } from '../redux/metrics/metrics';
+import Header from './Header';
 import world from '../img/world.jpg';
 
 const Metrics = () => {
@@ -26,12 +27,14 @@ const Metrics = () => {
   };
 
   return (
+
     <div className="bg-blue f-gill">
+      <Header />
       <div className="d-flex">
         <img className="card-img-top" src={world} alt="world-map" />
       </div>
 
-      <ul className="g-buttons py-5">
+      <div className="g-buttons py-5">
         {arr.map((element) => (
           <Link
             className="btn h-buttons btn-outline-light btn-lg py-5 fc-white s-container"
@@ -44,7 +47,7 @@ const Metrics = () => {
             </div>
           </Link>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };

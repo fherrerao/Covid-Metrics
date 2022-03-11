@@ -45,22 +45,11 @@ const Continents = () => {
   const nameC = continent.map((item) => item.continentName);
   const imgC = continent.map((item) => item.silhouette);
 
-  // const filtered = (searchTerms) => {
-  //   const resultSearc = arrContinents.filter((element) => {
-  //     if (element.toString().toLowerCase().includes(searchTerms.toLowerCase())) {
-  //       return element;
-  //     }
-  //   });
-
-  // }
-
-  // const handleChange = (e) => {
-  //   setSearch(e.target.value);
-  //   filtered(e.target.value);
-  // }
-
   return (
     <div className="bg-first">
+      <Link to="/" className="container c-icon">
+        <box-icon name="left-arrow" animation="burst-hover" color="#ffffff">{ }</box-icon>
+      </Link>
       <div className="d-flex justify-content-center align-items-center py-5 gap-5 bg-second">
         <img width="200px" src={imgC} alt="" />
         <p className="f-gill fs">{nameC}</p>

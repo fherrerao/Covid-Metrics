@@ -112,6 +112,11 @@ html {
   height: 3rem;
 }
 
+.c-icon {
+  width: 100px;
+  height: 100px;
+}
+
 @media (min-width: 768px) {
   .g-countries {
     display: grid;
@@ -126,5 +131,9 @@ html {
     width: 1200px;
     max-width: 90%;
     margin: 0 auto;
+  }
+
+  .c-icon {
+    display: none;
   }
 }
