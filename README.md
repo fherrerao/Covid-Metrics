@@ -51,6 +51,8 @@ You're free to use this project however it is developed for educational purposes
 
 ## Acknowledgments
 
+- Original design idea by [Nelson Sawka on Behance](https://www.behance.net/sakwadesignstudio)
+
 ## Show your support
 
 Give a ⭐️ if you like this project!
