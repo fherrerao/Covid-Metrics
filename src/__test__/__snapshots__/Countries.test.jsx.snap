@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing countries Render countries, create a snapshot 1`] = `
+<div
+  className="d-flex flex-column align-items-center py-5 bg-blue-light c-container"
+>
+  <img
+    alt="country"
+    className="i-country"
+    src={Array []}
+  />
+  <table
+    className="my-5 table table-striped table-bordered table-hover"
+  >
+    <thead>
+      <tr
+        className="bg-blue"
+      >
+        <th
+          className="tc-white"
+        />
+        <th />
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td
+          className="tc-white"
+        >
+          Population
+        </td>
+        <td
+          className="tc-white"
+        />
+      </tr>
+      <tr>
+        <td
+          className="tc-white"
+        >
+          Total cases
+        </td>
+        <td
+          className="tc-white"
+        />
+      </tr>
+      <tr>
+        <td
+          className="tc-white"
+        >
+          Today cases
+        </td>
+        <td
+          className="tc-white"
+        />
+      </tr>
+      <tr>
+        <td
+          className="tc-white"
+        >
+          Total deaths
+        </td>
+        <td
+          className="tc-white"
+        />
+      </tr>
+      <tr>
+        <td
+          className="tc-white"
+        >
+          Today deaths
+        </td>
+        <td
+          className="tc-white"
+        />
+      </tr>
+      <tr>
+        <td
+          className="tc-white"
+        >
+          Recovered
+        </td>
+        <td
+          className="tc-white"
+        />
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

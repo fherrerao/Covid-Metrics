@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { displayContinents } from "../redux/metrics/metrics";
 import { getMetrics } from "../redux/metrics/metrics";
@@ -63,7 +63,7 @@ const Metrics = () => {
       <div className="g-buttons py-5">
         {arr.map((element, index) => (
           <div className="h-buttons" key={index}>
-            <NavLink
+            <Link
               className="btn btn-outline-light btn-lg py-5 fc-white s-container"
               to={`/continents/${element}`}
               onClick={(e) => {
@@ -79,7 +79,7 @@ const Metrics = () => {
                 <div>{element.continentName}</div>
               </div> */}
               {element}
-            </NavLink>
+            </Link>
           </div>
         ))}
       </div>

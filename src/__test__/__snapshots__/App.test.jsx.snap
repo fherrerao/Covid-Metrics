@@ -1,0 +1,160 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Renders Correctly 1`] = `
+<div
+  className="bg-blue-light"
+>
+  <nav
+    className="navbar bg-blue f-gill fc-white"
+  >
+    <div
+      className="container-fluid d-flex justify-content-around"
+    >
+      <div>
+        <a
+          href="#/"
+          onClick={[Function]}
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            strokeWidth="0"
+            style={
+              Object {
+                "color": undefined,
+              }
+            }
+            viewBox="0 0 512 512"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M217.9 256L345 129c9.4-9.4 9.4-24.6 0-33.9-9.4-9.4-24.6-9.3-34 0L167 239c-9.1 9.1-9.3 23.7-.7 33.1L310.9 417c4.7 4.7 10.9 7 17 7s12.3-2.3 17-7c9.4-9.4 9.4-24.6 0-33.9L217.9 256z"
+            />
+          </svg>
+        </a>
+        <h1>
+          C
+          <img
+            alt=""
+            className="covid"
+            src="covid.svg"
+          />
+          vid-19
+        </h1>
+      </div>
+      <div
+        className="d-flex gap-sm-4"
+      >
+        <a
+          className="navbar-brand"
+          href="#/"
+          onClick={[Function]}
+        >
+          <box-icon
+            animation="burst-hover"
+            color="#ffffff"
+            name="microphone"
+            type="solid"
+          />
+        </a>
+        <a
+          className="navbar-brand fc-white"
+          href="#/about"
+          onClick={[Function]}
+        >
+          <box-icon
+            animation="burst-hover"
+            color="#ffffff"
+            name="cog"
+          />
+        </a>
+      </div>
+    </div>
+  </nav>
+  <div
+    className="bg-blue f-gill"
+  >
+    <div
+      className="d-flex"
+    >
+      <img
+        alt="world-map"
+        className="card-img-top"
+        src="world.jpg"
+      />
+    </div>
+    <div
+      className="g-buttons py-5"
+    >
+      <div
+        className="h-buttons"
+      >
+        <a
+          className="btn btn-outline-light btn-lg py-5 fc-white s-container"
+          href="#/continents/North America"
+          onClick={[Function]}
+        >
+          North America
+        </a>
+      </div>
+      <div
+        className="h-buttons"
+      >
+        <a
+          className="btn btn-outline-light btn-lg py-5 fc-white s-container"
+          href="#/continents/South America"
+          onClick={[Function]}
+        >
+          South America
+        </a>
+      </div>
+      <div
+        className="h-buttons"
+      >
+        <a
+          className="btn btn-outline-light btn-lg py-5 fc-white s-container"
+          href="#/continents/Asia"
+          onClick={[Function]}
+        >
+          Asia
+        </a>
+      </div>
+      <div
+        className="h-buttons"
+      >
+        <a
+          className="btn btn-outline-light btn-lg py-5 fc-white s-container"
+          href="#/continents/Africa"
+          onClick={[Function]}
+        >
+          Africa
+        </a>
+      </div>
+      <div
+        className="h-buttons"
+      >
+        <a
+          className="btn btn-outline-light btn-lg py-5 fc-white s-container"
+          href="#/continents/Europe"
+          onClick={[Function]}
+        >
+          Europe
+        </a>
+      </div>
+      <div
+        className="h-buttons"
+      >
+        <a
+          className="btn btn-outline-light btn-lg py-5 fc-white s-container"
+          href="#/continents/Australia-Oceania"
+          onClick={[Function]}
+        >
+          Australia-Oceania
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;
