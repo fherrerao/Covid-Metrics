@@ -16,7 +16,7 @@ const Countries = () => {
   const filterRecovered = filtered.map((item) => item.recovered);
 
   return (
-    <div className="d-flex flex-column align-items-center py-5 bg-blue-light c-container">
+    <div className="d-flex flex-column align-items-center pt-5 bg-blue-light c-container">
       <img className="i-country" src={filterImage} alt="country" />
       <Table className="my-5" striped bordered hover>
         <thead>
