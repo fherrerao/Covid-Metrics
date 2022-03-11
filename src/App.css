@@ -1,6 +1,30 @@
+.table tr:nth-of-type(2n) {
+  background-color: #4369b2 !important;
+}
+
+.table {
+  border: transparent !important;
+}
+
+.table-striped > tbody > tr:nth-of-type(2n-1) {
+  background-color: #5788e4 !important;
+}
+
+.bg-blue-light {
+  background-color: #5788e4 !important;
+}
+
+.tc-white {
+  color: #fff !important;
+}
+
 .g-buttons {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+}
+
+.wdt {
+  width: 100%;
 }
 
 .h-buttons {
@@ -8,6 +32,99 @@
   grid-template-columns: repeat(1, 1fr);
 }
 
-.wdt {
-  width: 100%;
+.pad-0 {
+  padding: 0;
+}
+
+.mg-0 {
+  margin: 0;
+}
+
+.bg-blue {
+  background-color: #4369b2;
+}
+
+.f-gill {
+  font-family: "Gill Sans", sans-serif;
+}
+
+.f-lato {
+  font-family: "Lato", sans-serif;
+}
+
+.fc-white {
+  color: #fff;
+}
+
+.covid {
+  animation: rotation 2s infinite linear;
+}
+
+.fs {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.fs-s {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.i-country {
+  width: 10rem;
+  height: 7rem;
+}
+
+.s-img-continent {
+  width: 5rem;
+  opacity: 0.5;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.bg-second {
+  background-color: #5788e4;
+}
+
+.bg-first {
+  background-color: #4369b2;
+}
+
+html {
+  background-color: #4369b2 !important;
+}
+
+.g-countries {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.wdt-countries {
+  width: 5rem;
+  height: 3rem;
+}
+
+@media (min-width: 768px) {
+  .g-countries {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 1200px;
+    max-width: 90%;
+    margin: 2rem auto;
+    gap: 1rem;
+  }
+
+  .c-container {
+    width: 1200px;
+    max-width: 90%;
+    margin: 0 auto;
+  }
 }

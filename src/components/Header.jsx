@@ -1,17 +1,26 @@
-import { NavLink } from "react-router-dom";
+import { Link } from 'react-router-dom';
+import covid from '../img/covid.svg';
 
 const Header = () => (
-  <nav className="navbar navbar-light bg-secondary">
-    <div className="container-fluid">
+  <nav className="navbar bg-blue f-gill fc-white">
+    <div className="container-fluid d-flex justify-content-around">
+      <Link to="/">
+        <box-icon name="left-arrow" animation="burst-hover" color="#ffffff"></box-icon>
+      </Link>
       <div>
         <h1>
-          C<box-icon type="solid" name="virus" animation="spin"></box-icon>
+          C
+          <img className="covid" src={covid} alt="" />
           vid-19
         </h1>
       </div>
-      <div>
-        <NavLink className="navbar-brand" to="/">Countries</NavLink>
-        <NavLink className="navbar-brand" to="about">About</NavLink>
+      <div className="d-flex gap-sm-4">
+        <Link className="navbar-brand" to="/">
+          <box-icon name="microphone" animation="burst-hover" type="solid" color="#ffffff"></box-icon>
+        </Link>
+        <Link className="navbar-brand fc-white" to="/">
+          <box-icon name="cog" animation="burst-hover" color="#ffffff"></box-icon>
+        </Link>
       </div>
     </div>
   </nav>
