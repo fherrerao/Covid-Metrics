@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import { HashRouter, Route, Routes } from 'react-router-dom';
-import Header from './components/Header';
 import Metrics from './components/Metrics';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Continents from './components/Continents';
@@ -11,7 +10,6 @@ function App() {
   return (
     <div className="bg-blue-light">
       <HashRouter basename="/">
-        <Header />
         <Routes>
           <Route path="/" element={<Metrics />} />
           <Route path="/continents/:name" element={<Continents />} />

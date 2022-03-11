@@ -1,12 +1,17 @@
 import { Link } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
 import { displayContinents, getMetrics } from '../redux/metrics/metrics';
+import Header from './Header';
 import world from '../img/world.jpg';
 
 const Metrics = () => {
   const dispatch = useDispatch();
-  dispatch(getMetrics());
+
+  useEffect(() => {
+    dispatch(getMetrics());
+  }, []);
 
   const arr = [
     'North America',
@@ -22,24 +27,25 @@ const Metrics = () => {
   };
 
   return (
+
     <div className="bg-blue f-gill">
+      <Header />
       <div className="d-flex">
         <img className="card-img-top" src={world} alt="world-map" />
       </div>
 
       <div className="g-buttons py-5">
         {arr.map((element) => (
-          <div className="h-buttons" key={uuidv4()}>
-            <Link
-              className="btn btn-outline-light btn-lg py-5 fc-white s-container"
-              to={`/continents/${element}`}
-              onClick={(e) => {
-                handlerContinent(e);
-              }}
-            >
-              {element}
-            </Link>
-          </div>
+          <Link
+            className="btn h-buttons btn-outline-light btn-lg py-5 fc-white s-container"
+            to={`/continents/${element}`}
+            key={uuidv4()}
+            onClick={(e) => { handlerContinent(e); }}
+          >
+            <div>
+              <p>{element}</p>
+            </div>
+          </Link>
         ))}
       </div>
     </div>

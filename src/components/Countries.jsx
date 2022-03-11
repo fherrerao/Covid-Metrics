@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { Table } from 'react-bootstrap';
 
 const Countries = () => {
@@ -16,7 +16,10 @@ const Countries = () => {
   const filterRecovered = filtered.map((item) => item.recovered);
 
   return (
-    <div className="d-flex flex-column align-items-center py-5 bg-blue-light c-container">
+    <div className="d-flex flex-column align-items-center py-1 bg-blue-light c-container">
+      <Link to={`/continents/${filtered}`} className="container c-icon">
+        <box-icon name="left-arrow" animation="burst-hover" color="#ffffff">{ }</box-icon>
+      </Link>
       <img className="i-country" src={filterImage} alt="country" />
       <Table className="my-5" striped bordered hover>
         <thead>

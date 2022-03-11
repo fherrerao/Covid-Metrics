@@ -1,5 +1,6 @@
 import { useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
+import { useState } from 'react';
 import sAmerica from '../img/south-america.svg';
 import nAmerica from '../img/north-america.svg';
 import asia from '../img/asia.svg';
@@ -10,6 +11,8 @@ import oceania from '../img/australia.svg';
 const Continents = () => {
   const arrContinents = useSelector((state) => state.metricsReducer);
   const { name } = useParams();
+
+  const [search, setSearch] = useState('');
 
   const objContinents = [
     {
@@ -44,25 +47,45 @@ const Continents = () => {
 
   return (
     <div className="bg-first">
+      <Link to="/" className="container c-icon">
+        <box-icon name="left-arrow" animation="burst-hover" color="#ffffff">{ }</box-icon>
+      </Link>
       <div className="d-flex justify-content-center align-items-center py-5 gap-5 bg-second">
         <img width="200px" src={imgC} alt="" />
         <p className="f-gill fs">{nameC}</p>
       </div>
+
+      <div>
+        <form className="d-flex container my-3">
+          <input
+            className="form-control me-2"
+            type="search"
+            placeholder="Search by country"
+            aria-label="Search"
+            onChange={({ target }) => {
+              setSearch(target.value);
+            }}
+          />
+        </form>
+      </div>
+
       <ul className="g-countries p-0">
-        {arrContinents.map((country) => (
-          <Link
-            className="btn btn-outline-light btn-lg py-5 fc-white"
-            to={`/countries/${country.country}`}
-            key={country.id}
-          >
-            <div>
-              <img className="wdt-countries" src={country.image} alt="" />
-              <p className="f-gill fs-s">
-                {country.country}
-              </p>
-            </div>
-          </Link>
-        ))}
+        {arrContinents
+          .filter((item) => item.country.toLowerCase().includes(search))
+          .map((country) => (
+            <Link
+              key={country.id}
+              className="btn btn-outline-light btn-lg py-5 fc-white"
+              to={`/countries/${country.country}`}
+            >
+              <div>
+                <img className="wdt-countries" src={country.image} alt="" />
+                <p className="f-gill fs-s">
+                  {country.country}
+                </p>
+              </div>
+            </Link>
+          ))}
       </ul>
     </div>
   );
