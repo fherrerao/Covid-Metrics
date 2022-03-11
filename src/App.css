@@ -31,16 +31,13 @@
   display: grid;
   grid-template-columns: repeat(1, 1fr);
 }
+
 .pad-0 {
   padding: 0;
 }
 
 .mg-0 {
   margin: 0;
-}
-
-.wdt {
-  width: 100%;
 }
 
 .bg-blue {
@@ -87,6 +84,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(359deg);
   }

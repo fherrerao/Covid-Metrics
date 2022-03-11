@@ -1,6 +1,6 @@
-import { useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
-import { Table } from "react-bootstrap";
+import { useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
+import { Table } from 'react-bootstrap';
 
 const Countries = () => {
   const params = useParams();
@@ -22,7 +22,7 @@ const Countries = () => {
         <thead>
           <tr className="bg-blue">
             <th className="tc-white">{filterCountry}</th>
-            <th></th>
+            <th>{ }</th>
           </tr>
         </thead>
         <tbody>
@@ -58,35 +58,6 @@ const Countries = () => {
         </tbody>
       </Table>
     </div>
-
-    // <div className="container">
-    //   <h2>{filtered[0].country}</h2>
-    //   <Table>
-    //     <li>{`Population: ${filtered[0].population
-    //       .toFixed(2)
-    //       .replace(/\d(?=(\d{3})+\.)/g, "$&,")}`}</li>
-
-    //     <li>{`Total cases: ${filtered[0].cases
-    //       .toFixed(2)
-    //       .replace(/\d(?=(\d{3})+\.)/g, "$&,")}`}</li>
-
-    //     <li>{`Today cases: ${filtered[0].todayCases
-    //       .toFixed(2)
-    //       .replace(/\d(?=(\d{3})+\.)/g, "$&,")}`}</li>
-
-    //     <li>{`Total deaths: ${filtered[0].deaths
-    //       .toFixed(2)
-    //       .replace(/\d(?=(\d{3})+\.)/g, "$&,")}`}</li>
-
-    //     <li>{`Today deaths: ${filtered[0].todayDeaths
-    //       .toFixed(2)
-    //       .replace(/\d(?=(\d{3})+\.)/g, "$&,")}`}</li>
-
-    //     <li>{`Recovered: ${filtered[0].recovered
-    //       .toFixed(2)
-    //       .replace(/\d(?=(\d{3})+\.)/g, "$&,")}`}</li>
-    //   </ul>
-    // </div>
   );
 };
 

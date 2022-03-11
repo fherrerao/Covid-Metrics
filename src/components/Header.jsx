@@ -1,32 +1,25 @@
-import { Link } from "react-router-dom";
-import covid from "../img/covid.svg";
-import { IoIosArrowBack } from "react-icons/io";
+import { Link } from 'react-router-dom';
+import covid from '../img/covid.svg';
 
 const Header = () => (
   <nav className="navbar bg-blue f-gill fc-white">
     <div className="container-fluid d-flex justify-content-around">
+      <Link to="/">
+        <box-icon name="left-arrow" animation="burst-hover" color="#ffffff"></box-icon>
+      </Link>
       <div>
-        <Link to="/">
-          <IoIosArrowBack />
-        </Link>
-
-        <h1>C{<img className="covid" src={covid} alt="" />}vid-19</h1>
+        <h1>
+          C
+          <img className="covid" src={covid} alt="" />
+          vid-19
+        </h1>
       </div>
       <div className="d-flex gap-sm-4">
         <Link className="navbar-brand" to="/">
-          <box-icon
-            name="microphone"
-            animation="burst-hover"
-            type="solid"
-            color="#ffffff"
-          ></box-icon>
+          <box-icon name="microphone" animation="burst-hover" type="solid" color="#ffffff"></box-icon>
         </Link>
-        <Link className="navbar-brand fc-white" to="about">
-          <box-icon
-            name="cog"
-            animation="burst-hover"
-            color="#ffffff"
-          ></box-icon>
+        <Link className="navbar-brand fc-white" to="/">
+          <box-icon name="cog" animation="burst-hover" color="#ffffff"></box-icon>
         </Link>
       </div>
     </div>

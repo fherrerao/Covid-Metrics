@@ -1,54 +1,21 @@
-import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { displayContinents } from "../redux/metrics/metrics";
-import { getMetrics } from "../redux/metrics/metrics";
-import world from "../img/world.jpg";
-// import s_america from "../img/south-america.svg";
-// import n_america from "../img/north-america.svg";
-// import asia from "../img/asia.svg";
-// import africa from "../img/africa.svg";
-// import europe from "../img/europe.svg";
-// import oceania from "../img/australia.svg";
+import { Link } from 'react-router-dom';
+import { v4 as uuidv4 } from 'uuid';
+import { useDispatch } from 'react-redux';
+import { displayContinents, getMetrics } from '../redux/metrics/metrics';
+import world from '../img/world.jpg';
 
 const Metrics = () => {
   const dispatch = useDispatch();
   dispatch(getMetrics());
 
   const arr = [
-    "North America",
-    "South America",
-    "Asia",
-    "Africa",
-    "Europe",
-    "Australia-Oceania",
+    'North America',
+    'South America',
+    'Asia',
+    'Africa',
+    'Europe',
+    'Australia-Oceania',
   ];
-
-  // const objContinents = [
-  //   {
-  //     continentName: "North America",
-  //     silhouette: n_america,
-  //   },
-  //   {
-  //     continentName: "South America",
-  //     silhouette: s_america,
-  //   },
-  //   {
-  //     continentName: "Asia",
-  //     silhouette: asia,
-  //   },
-  //   {
-  //     continentName: "Africa",
-  //     silhouette: africa,
-  //   },
-  //   {
-  //     continentName: "Europe",
-  //     silhouette: europe,
-  //   },
-  //   {
-  //     continentName: "Australia-Oceania",
-  //     silhouette: oceania,
-  //   },
-  // ];
 
   const handlerContinent = (e) => {
     dispatch(displayContinents(e.target.textContent));
@@ -61,8 +28,8 @@ const Metrics = () => {
       </div>
 
       <div className="g-buttons py-5">
-        {arr.map((element, index) => (
-          <div className="h-buttons" key={index}>
+        {arr.map((element) => (
+          <div className="h-buttons" key={uuidv4()}>
             <Link
               className="btn btn-outline-light btn-lg py-5 fc-white s-container"
               to={`/continents/${element}`}
@@ -70,14 +37,6 @@ const Metrics = () => {
                 handlerContinent(e);
               }}
             >
-              {/* <div className="d-flex align-items-center justify-content-around gap-1">
-                <img
-                  className="s-img-continent"
-                  src={element.silhouette}
-                  alt="continent"
-                />
-                <div>{element.continentName}</div>
-              </div> */}
               {element}
             </Link>
           </div>

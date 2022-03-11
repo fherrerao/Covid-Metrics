@@ -1,12 +1,11 @@
-import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
-import { useParams } from "react-router-dom";
-import s_america from "../img/south-america.svg";
-import n_america from "../img/north-america.svg";
-import asia from "../img/asia.svg";
-import africa from "../img/africa.svg";
-import europe from "../img/europe.svg";
-import oceania from "../img/australia.svg";
+import { useSelector } from 'react-redux';
+import { Link, useParams } from 'react-router-dom';
+import sAmerica from '../img/south-america.svg';
+import nAmerica from '../img/north-america.svg';
+import asia from '../img/asia.svg';
+import africa from '../img/africa.svg';
+import europe from '../img/europe.svg';
+import oceania from '../img/australia.svg';
 
 const Continents = () => {
   const arrContinents = useSelector((state) => state.metricsReducer);
@@ -14,27 +13,27 @@ const Continents = () => {
 
   const objContinents = [
     {
-      continentName: "North America",
-      silhouette: n_america,
+      continentName: 'North America',
+      silhouette: nAmerica,
     },
     {
-      continentName: "South America",
-      silhouette: s_america,
+      continentName: 'South America',
+      silhouette: sAmerica,
     },
     {
-      continentName: "Asia",
+      continentName: 'Asia',
       silhouette: asia,
     },
     {
-      continentName: "Africa",
+      continentName: 'Africa',
       silhouette: africa,
     },
     {
-      continentName: "Europe",
+      continentName: 'Europe',
       silhouette: europe,
     },
     {
-      continentName: "Australia-Oceania",
+      continentName: 'Australia-Oceania',
       silhouette: oceania,
     },
   ];
@@ -58,7 +57,9 @@ const Continents = () => {
           >
             <div>
               <img className="wdt-countries" src={country.image} alt="" />
-              <p className="f-gill fs-s">{country.country} </p>
+              <p className="f-gill fs-s">
+                {country.country}
+              </p>
             </div>
           </Link>
         ))}

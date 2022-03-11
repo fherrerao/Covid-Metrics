@@ -17,8 +17,7 @@ export const displayContinents = (name) => ({
 export const getMetrics = () => async (dispatch) => {
   const response = await fetch(url);
   const data = await response.json();
-  const arrData = data.map(element => ({
-    id: element.countryInfo._id,
+  const arrData = data.map((element) => ({
     continent: element.continent,
     country: element.country,
     image: element.countryInfo.flag,
@@ -42,15 +41,14 @@ const metricsReducer = (state = initialState, action) => {
       return [...action.payload];
 
     case DISPLAY_CONTINENTS:
-      {
-        const newState = state.filter((item) => item.continent === action.name);
-        console.log(...newState);
-        return [...newState];
-      }
+    {
+      const newState = state.filter((item) => item.continent === action.name);
+      return [...newState];
+    }
 
     default:
       return state;
   }
-}
+};
 
 export default metricsReducer;
