@@ -117,6 +117,10 @@ html {
   height: 100px;
 }
 
+.btn-back {
+  all: unset;
+}
+
 @media (min-width: 768px) {
   .g-countries {
     display: grid;

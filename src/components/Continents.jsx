@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import sAmerica from '../img/south-america.svg';
 import nAmerica from '../img/north-america.svg';
 import asia from '../img/asia.svg';
@@ -11,7 +12,6 @@ import oceania from '../img/australia.svg';
 const Continents = () => {
   const arrContinents = useSelector((state) => state.metricsReducer);
   const { name } = useParams();
-
   const [search, setSearch] = useState('');
 
   const objContinents = [
@@ -44,12 +44,17 @@ const Continents = () => {
   const continent = objContinents.filter((item) => item.continentName === name);
   const nameC = continent.map((item) => item.continentName);
   const imgC = continent.map((item) => item.silhouette);
+  const navigate = useNavigate();
 
   return (
     <div className="bg-first">
-      <Link to="/" className="container c-icon">
+      <button
+        type="button"
+        className="btn-back c-icon p-1"
+        onClick={() => navigate(-1)}>
         <box-icon name="left-arrow" animation="burst-hover" color="#ffffff">{ }</box-icon>
-      </Link>
+      </button>
+
       <div className="d-flex justify-content-center align-items-center py-5 gap-5 bg-second">
         <img width="200px" src={imgC} alt="" />
         <p className="f-gill fs">{nameC}</p>
