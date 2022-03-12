@@ -13,7 +13,7 @@
 - React Framework
 - Redux
 
-## Live Demo
+## Live Demo ()
 
 [Demo link](https://bookstore-fh.herokuapp.com/).
 
