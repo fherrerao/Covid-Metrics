@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/Covid-Metrics/static/css/main.1c4c3c28.css",
+    "main.js": "/Covid-Metrics/static/js/main.dde3c018.js",
+    "static/media/world.jpg": "/Covid-Metrics/static/media/world.261299a6faef6c91b586.jpg",
+    "static/media/europe.svg": "/Covid-Metrics/static/media/europe.a62dcd11d4963cfcbb7c831ce6c5039b.svg",
+    "static/media/north-america.svg": "/Covid-Metrics/static/media/north-america.79a5ae09919775915932885c901d01aa.svg",
+    "static/media/asia.svg": "/Covid-Metrics/static/media/asia.398448c21ea19f963c5d767bd80faa96.svg",
+    "static/media/africa.svg": "/Covid-Metrics/static/media/africa.7db1cafc6508cd470cdbc84e32bfb474.svg",
+    "static/media/australia.svg": "/Covid-Metrics/static/media/australia.67dc4482e2e1204d6d8d6435ab14d754.svg",
+    "static/media/south-america.svg": "/Covid-Metrics/static/media/south-america.42c58aa9137dc7ff40f65f8cbc998c47.svg",
+    "static/media/covid.svg": "/Covid-Metrics/static/media/covid.0918859c7cbf4c2ff7e58b1a832569ab.svg",
+    "index.html": "/Covid-Metrics/index.html",
+    "main.1c4c3c28.css.map": "/Covid-Metrics/static/css/main.1c4c3c28.css.map",
+    "main.dde3c018.js.map": "/Covid-Metrics/static/js/main.dde3c018.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1c4c3c28.css",
+    "static/js/main.dde3c018.js"
+  ]
+}
