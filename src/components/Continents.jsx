@@ -76,7 +76,7 @@ const Continents = () => {
 
       <ul className="g-countries p-0">
         {arrContinents
-          .filter((item) => item.country.toLowerCase().includes(search))
+          .filter((item) => item.country.toLowerCase().includes(search.toLowerCase()))
           .map((country) => (
             <Link
               key={country.id}
