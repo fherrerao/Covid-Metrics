@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing Continents Render the continents, create a snapshot 1`] = `
+<div
+  className="bg-first"
+>
+  <div
+    className="d-flex justify-content-center align-items-center py-5 gap-5 bg-second"
+  >
+    <img
+      alt=""
+      src={Array []}
+      width="200px"
+    />
+    <p
+      className="f-gill fs"
+    />
+  </div>
+  <ul
+    className="g-countries p-0"
+  />
+</div>
+`;
