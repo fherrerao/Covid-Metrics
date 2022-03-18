@@ -3,7 +3,6 @@ import { v4 as uuidv4 } from 'uuid';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { displayContinents, getMetrics } from '../redux/metrics/metrics';
-import Header from './Header';
 import world from '../img/world.jpg';
 
 const Homepage = () => {
@@ -29,7 +28,6 @@ const Homepage = () => {
   return (
 
     <div className="bg-blue f-gill">
-      <Header />
       <div className="d-flex">
         <img className="card-img-top" src={world} alt="world-map" />
       </div>

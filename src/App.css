@@ -27,6 +27,10 @@
   width: 100%;
 }
 
+h1 {
+  margin: 0 !important;
+}
+
 .h-buttons {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -135,9 +139,5 @@ html {
     width: 1200px;
     max-width: 90%;
     margin: 0 auto;
-  }
-
-  .c-icon {
-    display: none;
   }
 }

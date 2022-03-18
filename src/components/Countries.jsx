@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { Table } from 'react-bootstrap';
 
 const Countries = () => {
@@ -14,17 +14,9 @@ const Countries = () => {
   const filterTotalDeaths = filtered.map((item) => item.deaths);
   const filterTodayDeaths = filtered.map((item) => item.todayDeaths);
   const filterRecovered = filtered.map((item) => item.recovered);
-  const navigate = useNavigate();
 
   return (
     <div className="d-flex flex-column align-items-center pt-3 bg-blue-light c-container">
-      <button
-        type="button"
-        className="container btn-back c-icon"
-        onClick={() => navigate(-1)}
-      >
-        <box-icon name="left-arrow" animation="burst-hover" color="#ffffff">{ }</box-icon>
-      </button>
 
       <img className="i-country" src={filterImage} alt="country" />
       <Table className="my-5" striped bordered hover>
