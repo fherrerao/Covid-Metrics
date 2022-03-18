@@ -6,7 +6,7 @@ import { displayContinents, getMetrics } from '../redux/metrics/metrics';
 import Header from './Header';
 import world from '../img/world.jpg';
 
-const Metrics = () => {
+const Homepage = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -52,4 +52,4 @@ const Metrics = () => {
   );
 };
 
-export default Metrics;
+export default Homepage;
